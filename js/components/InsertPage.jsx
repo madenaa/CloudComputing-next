@@ -19,10 +19,10 @@ export default function InsertPage() {
 	}
 
 	return (
-		<section className="bg-white dark:bg-gray-900">
+		<section className="bg-black dark:bg-black-900">
 			<div className="container px-6 py-10 mx-auto">
 				<h1 className="w-[500px] mx-auto text-center text-6xl">Snap your event here</h1>
-				<p className="w-[1000px] mx-auto text-center mt-4 text-3xl">This is where you insert your event</p>
+				<p className="font-sans hover:font-serif w-[1000px] mx-auto text-center mt-4 text-3xl">This is where you insert your event</p>
 
 				<form>
 					<div className="mb-6">
@@ -41,7 +41,7 @@ export default function InsertPage() {
 					</div>
 					<button type="submit"
 					       onClick={ insertRecord }
-					        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit
+					        className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Submit
 					</button>
 				</form>
 			</div>
