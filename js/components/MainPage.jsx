@@ -19,6 +19,23 @@ export default function MainPage() {
 
     console.log(records);
 
+    const deleteRecord = (event) => {
+		event.preventDefault();
+		const id = event.target.id;
+		try {
+			fetch(`/api/records?id=${id}`, {
+				method: 'DELETE',
+			})
+				.then(response => response.json())
+				.then(json => {
+						setRecords(records.filter(record => record._id !== id));
+				});
+		}
+		catch (error) {
+			console.log(error);
+		}
+	}
+
 	return (
 		<section className={"bg-black"}>
             <div className={"container px-6 py-10 mx-auto"}>
@@ -35,6 +52,13 @@ export default function MainPage() {
                                 className={"mb-2 text-2xl font-bold tracking-tight text-gray-900 text-purple-500"}
                                 >{record.titlu}  </h3>                        
                                 <p className={"font-normal"}>{record.descriere}</p>
+                                <div className={"flex justify-center mt-4"}>
+								<button type="button"
+								        id={record._id}
+								        onClick={deleteRecord}
+								        className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete
+								</button>
+							</div>
                                 </div>
                         ))
                     }
