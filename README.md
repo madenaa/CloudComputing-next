@@ -1,4 +1,4 @@
 # DOCUMENTATIE PROIECT
 ==========================
-##  =EventSnap= 
+## *=EventSnap=* 
 
