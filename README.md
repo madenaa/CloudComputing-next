@@ -1,3 +1,3 @@
 # DOCUMENTATIE PROIECT
-## _ _ =EventSnap= 
+## __ =EventSnap= 
 
