@@ -1,1 +1,3 @@
-[Descarcă fișierul DOCX](./Documentatie Proiect.docx)
+# DOCUMENTATIE PROIECT
+## =EventSnap= 
+
